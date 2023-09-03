@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Check style
-        run: npm run eslint
+        run: npm run lint
       - name: Notify success
         uses: rjstone/discord-webhook-notify@89b0bf43c2c8514f70d0dcba4a706b904e8a3112
         if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message), '#skip') && success() }}
