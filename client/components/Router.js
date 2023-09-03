@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import FrontPage from 'Components/FrontPage'
 import MessageView from 'Components/MessageView'
 
+// eslint-disable-next-line
 export default () => (
   <div className="content">
     <Switch>
