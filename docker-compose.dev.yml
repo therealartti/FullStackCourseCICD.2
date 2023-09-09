@@ -1,0 +1,17 @@
+services:
+  app:
+    image: hello-front-dev
+    build:
+      context: ./todo-frontend
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./todo-frontend:/usr/src/todo-frontend
+    container_name: todo-front
+  todo-backend:
+    image: todo-backend
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./todo-backend:/usr/src/todo-backend 
+    container_name: todo-backend
